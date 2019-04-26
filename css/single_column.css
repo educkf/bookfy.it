@@ -1,0 +1,140 @@
+@page {
+  position: relative; }
+
+@page :left {
+  margin: 2cm 2.2cm 2cm 3.5cm; }
+
+@page :right {
+  margin: 2cm 3.5cm 2cm 2.2cm; }
+
+@page :first {
+  margin-top: 4cm; }
+
+/* line 17, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+body {
+  text-align: justify;
+  counter-reset: chapter; }
+
+/* line 22, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h1, h2, h3, h4, h5 {
+  text-align: left; }
+
+/* line 27, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h1 {
+  font: bold 29pt/29pt 'Roboto Condensed', sans-serif;
+  color: #000;
+  padding: 0 35% 1cm 0;
+  margin: 0 0 1cm 0;
+  text-align: left;
+  letter-spacing: -1px; }
+
+/* line 36, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h1:first-child {
+  counter-reset: page 1; }
+
+@page {
+  @top {
+    content: "Página " counter(page); }
+ }
+
+/* line 45, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h2 {
+  font: 600 22pt/24.5pt 'Roboto Condensed', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 2cm 0 0.5cm 0;
+  page-break-before: always; }
+
+/* line 52, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h2 span::after {
+  content: "Part " counter(chapter);
+  counter-increment: chapter; }
+
+/* line 57, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h2:first-child {
+  padding-top: 0; }
+
+/* line 61, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h1 + h2, h2 + h2 {
+  font: italic 15pt/18.5pt 'Crimson Text', serif;
+  color: #333;
+  margin: 0 0 0 0;
+  padding: 0 0 0.8cm 0;
+  text-align: left;
+  letter-spacing: -1px;
+  list-style: none;
+  page-break-before: avoid; }
+
+/* line 72, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h3 {
+  font: 800 18pt/19.5pt 'Roboto Condensed', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0.8cm 0 0.5cm 0; }
+
+/* line 78, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h4 {
+  font: bold 16pt/18pt 'Roboto Condensed', sans-serif;
+  margin: 1cm 0 0.3cm 0; }
+
+/* line 83, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+.page-break {
+  page-break-after: always; }
+
+/* line 85, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+ul.author {
+  font: italic 15pt/18.5pt 'Crimson Text', serif;
+  color: #000;
+  margin: 0 0 0 0;
+  padding: 0 0 0.8cm 0;
+  text-align: left;
+  letter-spacing: -1px;
+  border-bottom: 1px solid #999;
+  list-style: none; }
+
+/* line 95, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+ul.author li {
+  color: #333;
+  padding: 0 0 0.1cm 0; }
+
+/* line 100, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+ul.author li span {
+  color: #999;
+  font-size: 13pt; }
+
+/* line 105, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+p {
+  font: 12pt/14pt 'Crimson Text', serif;
+  text-indent: 1cm;
+  margin: 0;
+  padding: 0;
+  orphans: 3;
+  widows: 3;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+/* line 117, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {
+  text-indent: 0; }
+
+/* line 121, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+blockquote {
+  font: italic 12pt/15pt 'Crimson Text', serif;
+  padding: 0.8cm 0 0.9cm 1.5cm;
+  margin: 0;
+  text-align: justify;
+  orphans: 2;
+  widows: 2; }
+
+/* line 130, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+blockquote + p {
+  text-indent: 0; }
+
+/* line 134, C:/Dropbox/Eduardo/Trabalhos e Projetos/Pessoais/Bookfy.it/single_column/single_column.scss */
+img {
+  width: inherit;
+  margin: 0.5cm auto 1cm;
+  display: block; }
+
+/*# sourceMappingURL=single_column.css.map */
